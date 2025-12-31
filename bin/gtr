@@ -891,12 +891,6 @@ EOF
       exit 1
     fi
 
-    # Ensure gh CLI is available
-    if ! command -v gh >/dev/null 2>&1; then
-      log_error "GitHub CLI (gh) not found. Visit https://cli.github.com to install"
-      exit 1
-    fi
-
     # Fetch latest from origin
     log_step "Fetching from origin..."
     git fetch origin --prune 2>/dev/null || log_warn "Could not fetch from origin"
